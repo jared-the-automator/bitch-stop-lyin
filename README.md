@@ -6,6 +6,14 @@ Hence the name.
 
 Drop-in skill for [Claude Code](https://claude.com/claude-code). The ideas port to any harness that takes a system prompt.
 
+## About the name
+
+It's an Ice Cube line, from "Gangsta Gangsta" on N.W.A's *Straight Outta Compton*. Old heads will place it. WhoSampled has that track turning up in [over 200 songs](https://www.whosampled.com/N.W.A/Gangsta-Gangsta/sampled/).
+
+The bitch in question is Claude. This thing exists because my agent kept telling me things it never checked, and the name is addressed to the machine doing the lying.
+
+If that doesn't fly where you work, the directory name is the invocation name. Rename it to whatever passes review.
+
 ## Why "don't hallucinate" does nothing
 
 The agent almost never decides to make something up. It reaches for a fact that feels solid, and the feeling of solidity is the entire problem. Familiar platforms are where training data rots fastest, because nothing ever gave you a reason to doubt something you've "known" for two years.
@@ -45,7 +53,7 @@ git clone https://github.com/jared-the-automator/bitch-stop-lyin.git
 cp -r bitch-stop-lyin ~/.claude/skills/
 ```
 
-The directory name becomes the invocation name, so rename it if the original doesn't suit your workplace. No dependencies, no configuration.
+No dependencies, no configuration.
 
 For other harnesses, paste `SKILL.md` into your system prompt or rules file. [docs/ADAPTING.md](docs/ADAPTING.md) covers Cursor, Copilot, and raw API use, including what to cut first when you need it smaller.
 
