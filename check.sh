@@ -4,20 +4,25 @@
 set -u
 
 SKILL="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/SKILL.md"
-BUDGET=16384
+SIGNAL_MARK=16384
+BUDGET=$SIGNAL_MARK
 FAIL=0
 
 pass() { echo "  ok    $1"; }
 fail() { echo "  FAIL  $1"; FAIL=$((FAIL+1)); }
+warn() { echo "  warn  $1"; }
 
 echo "checking SKILL.md"
 
-# 1. Budget. The whole point of the compression; re-inflation is the risk.
+# 1. Size is a SIGNAL, not a limit. Passing the mark means go looking for
+#    duplication - two rules covering one mechanism, or a narrative that crept
+#    back in. It never means cut load-bearing content to hit a number.
+#    Deduplicating and generalizing shrink a file safely; trimming does not.
 SIZE=$(wc -c < "$SKILL")
 if [ "$SIZE" -le "$BUDGET" ]; then
-    pass "size ${SIZE}B within ${BUDGET}B budget"
+    pass "size ${SIZE}B (signal mark ${BUDGET}B)"
 else
-    fail "size ${SIZE}B exceeds ${BUDGET}B budget - compress before adding"
+    warn "size ${SIZE}B is past the ${BUDGET}B signal mark - look for duplication, do not trim to fit"
 fi
 
 # 2. Required structure. A missing section means someone restructured

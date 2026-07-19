@@ -126,5 +126,5 @@ Compressed 2026-07-14 from 33KB of per-incident narratives (archive: `ARCHIVE-20
 1. **New caught failure → find its family.** Add one "tell" line to the matching Rationalization Family, or swap the family's canonical example if the new incident is a clearer teacher. A NEW family requires a genuinely new rationalization mechanism, which is rare — not merely a new incident.
 2. **The incident story goes in the commit message, never in this file.** One-line canonical examples only.
 3. **Never append to a list without reading the whole file first** — if the rule already exists anywhere in the file, strengthen it in place. Duplication is how this file bloated to 33KB.
-4. **Budget: this file stays under 16KB** (currently ~15.3KB). Over budget → compress before adding.
+4. **Size is a signal, not a limit.** Past ~16KB, go looking for duplication: two rules covering one mechanism, or an incident narrative that crept back in. Never cut load-bearing content to hit a number — deduplicating and generalizing shrink a file safely, trimming to fit does not.
 5. **If your skills directory is synced from a dotfiles repo, mirror the edit there in the same session**, or the next sync reverts it.
