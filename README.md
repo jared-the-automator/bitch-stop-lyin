@@ -30,7 +30,7 @@ Two protocols, both firing on what the agent is about to output rather than on w
 
 ## The six rationalization families
 
-The rules matter less than the taxonomy of excuses. Every verification skip this thing has caught reduces to one of six thoughts.
+The rules matter less than the taxonomy of excuses. Every verification skip this thing has caught reduces to one of eight thoughts.
 
 **1. No exempt frame.** "This is conversational." "It's a proposal, not a spec." "I'm only summarizing what we already established." "Nobody asked, I volunteered it." Position, register, document type, and authorship change nothing. Restating an unverified claim creates a fresh unverified claim.
 
@@ -69,7 +69,7 @@ The lesson runs against instinct. A behavioral skill that grows by appending one
 
 ## Maintaining it
 
-`SKILL.md` ends with rules for its own upkeep, and `check.sh` enforces the mechanical ones in CI: a 16KB budget, the required sections, exactly six families, and no family entry over 1200 characters. That last check is the one that catches somebody pasting an incident narrative back in.
+`SKILL.md` ends with rules for its own upkeep, and `check.sh` enforces the mechanical ones in CI: a 16KB signal mark, the required sections, exactly eight families, and no family entry over 1200 characters. That last check is the one that catches somebody pasting an incident narrative back in.
 
 A new caught failure gets one line added to whichever family already covers it. New families are rare, since a new incident isn't the same thing as a new rationalization mechanism.
 

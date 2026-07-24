@@ -40,10 +40,10 @@ done
 # 3. Family count. New families should be rare; a jump means incidents are
 #    being appended as families instead of folded into existing ones.
 FAMILIES=$(awk '/^### Rationalization Families/{f=1; next} f && /^#{2,3} /{f=0} f && /^\*\*[0-9]+\. /{c++} END{print c+0}' "$SKILL")
-if [ "$FAMILIES" -eq 6 ]; then
-    pass "6 rationalization families"
+if [ "$FAMILIES" -eq 8 ]; then
+    pass "8 rationalization families"
 else
-    fail "expected 6 families, found $FAMILIES - a new family needs a new mechanism, not a new incident"
+    fail "expected 8 families, found $FAMILIES - a new family needs a new mechanism, not a new incident"
 fi
 
 # 4. Frontmatter must be intact and name the skill.
